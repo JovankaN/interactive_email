@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" href="stylesheets/styles.css"> -->
+  <script type="text/javascript" src="script.js"></script>
+  <script src="jquery-1.10.2.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet'type='text/css'>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style type="text/css"></style>
+  <title>Connect Work</title>
+
+
+</head>
+  <body>
+    <!--Here we create a form that'll take the employer to the actual website needed using FORM
+      Still need to decide which website we'll sent eh employer to, so we'll use
+      http://connectwork.dptechgroup.com/en_Employers.html  for now -->
+  <form method-"GET" action="http://connectwork.dptechgroup.com/en_Employers.html" style>
+
+    <h1>Connect work Logo</h1>
+    <h2>Good morning ... date time etc.... </h2><br>
+    <div class="current_list">
+    <h2> Here is the list of the current candidates today....<h2>
+    </div>
+    <br>
+    <br>
+    <div class="candidates">
+    	<ul>
+    	<div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Allyson</a>
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <table>
+              <tr><td>Resume</td></tr>
+              <tr><td><embed src="/Users/AllysonAcosta/Library/Messages/Attachments/cb/11/0E0004C8-3136-40EC-BC8F-F447A8ED2BE3/interactive_email/server-food-restaurant-resume-example-emphasis-3-full.png"
+                style="border:1px solid black;"></embed></td>
+              </tr>
+            </table>
+            <div class="button" style="text-align:center;">
+              <!-- The input type here is a checkbox, we need to create a php file that processes which are checked and which are not and
+              then send that file to the site that we want the employer to go directly to-->
+              <span class="label label-success" style="font-size:110%;" for="candidate">Add Candidate
+              <input type="checkbox" name="candidate" value="candidate" style="background-color:transparent;">
+                <!--<button type="button" class="btn btn-success">Add Candidate</button>-->
+                </span>
+            </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Jovanka</a>
+            </h4>
+          </div>
+           <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body">
+              <table>
+              <tr><td>Resume</td></tr>
+              <tr><td><embed src="example_resume.pdf" style="height:1000px; width:1000px;"></embed></td>
+              </tr>
+            </table>
+            <div class="button" style="text-align:center;">
+              <!-- The input type here is a checkbox, we need to create a php file that processes which are checked and which are not and
+              then send that file to the site that we want the employer to go directly to-->
+              <input type="checkbox" name="candidate" value="candidate" style="background-color:transparent; display:none;">
+                <!--<button type="button" class="btn btn-success">Add Candidate</button>-->
+                <span class="label label-success" style="font-size:110%;" for="candidate">Add Candidate</span>
+            </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Enrique</a>
+            </h4>
+          </div>
+          <div id="collapse3" class="panel-collapse collapse">
+            <div class="panel-body">
+            <table>
+              <tr><td>Resume</td></tr>
+            </table>
+            <div class="button" style="text-align:center;">
+              <!-- The input type here is a checkbox, we need to create a php file that processes which are checked and which are not and
+              then send that file to the site that we want the employer to go directly to-->
+              <input type="checkbox" name="candidate" value="candidate" style="background-color:transparent; display:none;">
+                <!--<button type="button" class="btn btn-success">Add Candidate</button>-->
+                <span class="label label-success" style="font-size:110%;" for="candidate">Add Candidate</span>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    	</ul>
+    </div>
+    <div class="buttonCount" style="text-align:center">
+      <input type="submit" name="candidate" value="Save Candidates" style="background-color:#5cb85c; display:inline; padding:.2em .6em .3em; font-size:110%; font-weight:700; line-height:1; color:#fff; text-align:center; white-space:nowrap; vertical-align:baseline; border-radius:.25em;">
+        <!--<button type="button" class="btn btn-success">Add Candidate</button>-->
+        <!--<span class="label label-success" style="font-size:110%;" for="saveCandidates">Save Candidates</span> -->
+    </div>
+  </form>
+
+    <footer>
+      <!-- Copyright@2017 -->
+    </footer>
+
+  </body>
+</html>
