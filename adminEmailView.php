@@ -165,7 +165,7 @@ for ($i=1;$i<=$num_of_resumes;$i++)
             </table>
             <div class="checkbox" style="text-align:center;">
               <!-- The input type here is a checkbox, we need to create a php file that processes which are checked and which are not and then send that file to the site that we want the employer to go directly to-->
-              <input type="checkbox" id= "box'.$i.'" name="candidate[]" value="'.$candidates[i-1].'" style="display:none;"/>
+              <input type="checkbox" id= "box'.$i.'" name="candidate[]" value="'.$candidates[$i-1].'" style="display:none;"/>
               <label class=labelA for="boxA">Add Candidate</label>
             </div>
             </div>
