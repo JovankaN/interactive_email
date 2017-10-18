@@ -18,6 +18,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <style type="text/css">
+      .mainDiv{
+          
+          width: 70%;
+          
+          margin-right: auto;
+          margin-left: auto;
+      }
     
     input + label{
       background-color:#5cb85c;
@@ -91,29 +98,49 @@
           color: black; 
           border: 2px solid #4CAF50;
           text-align:center;
-          padding-left:20px;
+          padding-left:15px;
+          padding-right: 15px;
           border-radius:.25em;
+          margin-top: 20px;
        }
        .feedback:hover{
            background-color: #4CAF50;
           color: white;
        }
+      /* .mobileLink{
+           visibility: hidden;
+       }*/
+            
+      
+           @media screen and (max-width: 667px) {
               
-    
-
+               textarea{
+                   
+                  width: 210px;
+                  height: 150px;
+                  
+               }
+               .feedback{
+                   margin-top: 15px;
+               }
+               iframe{
+                   visibility: hidden;
+               }
+               mobileLink{
+                   visibility: visible;
+               }
+       }
 
   </style>
   <title>Connect Work</title>
-  <!--  $candidateA;
-  $candidateB;
-  $candidateC;
--->
+
 
 </head>
   <body>
     <!--Here we create a form that'll take the employer to the actual website needed using FORM
       Still need to decide which website we'll sent eh employer to, so we'll use
       http://connectwork.dptechgroup.com/en_Employers.html  for now -->
+   <div class='mainDiv'>
   <form method="GET" action="">
     <div style="text-align:center;">
         <img src="connectWorkLogo.png" width="100px" height="100px"> 
@@ -121,7 +148,7 @@
     </div>
     <br>
     <br>
-   <div class="col-xs-12 col-sm-12 col-lg-12">
+    <div style="margin-left: auto; margin-right: auto;" class="col-xs-12 col-sm-12 col-lg-12">
 <div class="candidates">
 <div class="panel-group" id="accordion">    
      <?php
@@ -142,12 +169,13 @@ for ($i=1;$i<=$num_of_resumes;$i++)
             <div class="panel-body">
 
               <table>
-              <tr><td>Resume</td></tr>
+              <tr><td> <a class="mobileLink" href="sampleR.pdf">Resume</a>
+              <iframe src="sampleR.pdf" style="width:100%;height:100%;"> </iframe> </td></tr>
             </table>
             <div class="checkbox" style="text-align:center;">
               <!-- The input type here is a checkbox, we need to create a php file that processes which are checked and which are not and then send that file to the site that we want the employer to go directly to-->
               <input type="checkbox" id= "box'.$i.'" name="candidate[]" value="'.$candidates[$i-1].'" style="display:none;"/>
-              <label class=labelA for="box'.$i.'">Add Candidate</label>
+              <label class=labelA for="boxA">Add Candidate</label>
             </div>
             </div>
           </div>
@@ -165,25 +193,25 @@ for ($i=1;$i<=$num_of_resumes;$i++)
     </div>
   </form>
 
-    <footer>
+    
       <!-- Copyright@2017 -->
-      <div style="margin-top:40px; text-align:center;">
-        <textarea rows="4" cols="50">
-        Leave your comments here...
-        </textarea>
+      <div style="margin-top:30px; text-align: center; padding: 20px;">
+          
+          <textarea cols="40" rows="10" >Leave your comments here...
+              </textarea>
+          
         <br/>
         <label class="feedback">I'd like to talk more</label>
-        <br/>
-        <br/>
         <label class="feedback">Not Interested</label>
         <label class="feedback">I want more like this</label>
       </div>
      
-    </footer>
+   
     <br/>
     <br/>
 
 </div>
+   </div>
     
 
 </body>
